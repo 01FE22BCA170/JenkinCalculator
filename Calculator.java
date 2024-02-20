@@ -2,7 +2,7 @@
  * The Calculator class performs basic arithmetic operations such as addition, subtraction,
  * multiplication, and division on two float operands.
  */
-class Calculator{
+public class Calculator extends ExtendedCalculator{
 
     /**
      * The function "addition" takes two float operands and returns their sum.
@@ -48,8 +48,7 @@ class Calculator{
     float division(float operand_1, float operand_2){
         return(operand_1 / operand_2);
     }
-
-
+    
     public static void main(String[] args){
         float operand_1 = 10;
         float operand_2 = 5;
@@ -62,5 +61,9 @@ class Calculator{
         System.out.println("Result of Multiplication is: " + mul_result);
         float div_result = calc.division(operand_1, operand_2);
         System.out.println("Result of Division is: " + div_result);
+        float sq = calc.square(operand_1); // Call square method
+        System.out.println("Square = " + sq); // Print square result
+        float cu = calc.cube(operand_1); // Call cube method
+        System.out.println("Cube = " + cu); // Print cube result
     }
 }
